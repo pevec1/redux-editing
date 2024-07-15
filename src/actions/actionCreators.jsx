@@ -13,6 +13,6 @@ export function removeService(id) {
 export function changeServiceField(name, value) {
   return { type: CHANGE_SERVICE_FIELD, payload: { name, value } };
 }
-export function editService(id) {
-  return { type: EDIT_SERVICE, payload: { id } };
+export function editService(name, price) {
+  return { type: EDIT_SERVICE, payload: { name, price } };
 }

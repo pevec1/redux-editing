@@ -9,7 +9,7 @@ export default function ServiceList() {
 
   const handleEdit = (id, name, price) => {
     console.log(id, name, price);
-    dispatch(editService(id, name, price));
+    dispatch(editService(name, price));
 
   };
   return (
