@@ -8,11 +8,9 @@ const initialState = [
 export default function serviceListReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_SERVICE:
-      const { name, price } = action.payload;
-      return [...state, { id: nanoid(), name, price: Number(price) }];
+      return [...state, { id: nanoid(), name: action.payload.name, price: Number(action.payload.price) }];
     case REMOVE_SERVICE:
-      const { id } = action.payload;
-      return state.filter((service) => service.id !== id);
+      return state.filter((service) => service.id !== action.payload.id);
     default:
       return state;
   }
